@@ -22,16 +22,12 @@ export const useFetch = (url) => {
             .then(data => {
 
                     if(isMounted){
-                        // console.log('Componente Montado');
                         setState({
                             loadin: false,
                             error: null,
                             data
                         })
                     }
-                    // }else{
-                    //     console.log('Componente Desmontado');
-                    // }
 
             })
     }, [url])
